@@ -6,7 +6,7 @@ def employee_print(employee_info):
     keydiferente = False
     for key in employee_info:
         if key != "Name" and key != "Salary" and key != "Role":
-            print(key, ":", employee_info[key])
+            print(key + ":", employee_info[key])
         keydiferente = True
     if keydiferente == False:
         print("No other info!")
