@@ -1,8 +1,8 @@
 # Write your code here!
 def employee_print(employee_info):
-    print(employee_info.get("Name", "N/A"))
-    print(employee_info.get("Salary", "N/A"))
-    print(employee_info.get("Role", "N/A"))
+    print("Name:", employee_info.get("Name", "N/A"))
+    print("Salary:", employee_info.get("Salary", "N/A"))
+    print("Role:", employee_info.get("Role", "N/A"))
     if "Name" == "" and "Salary" == "" and "Role" == "":
         print("No other info!")
     elif "Name" == "":
