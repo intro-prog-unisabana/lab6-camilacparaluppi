@@ -11,9 +11,10 @@ def assignment_averages(students):
     result = {}
     for student, notas in students.items():
         for tarea, nota in notas.items():
-            if tarea not in result:
-                result[tarea] = 0
-            result[tarea] = nota 
+            if tarea in result:
+                result[tarea] = nota  
+            else:
+                result[tarea] = nota
     for tarea in result:
         result[tarea] = round(result[tarea] / len(result))  
     return result
