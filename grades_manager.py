@@ -25,3 +25,25 @@ def get_students(student_grades, keys):
         if estudiante == False:
             print(name.title() + " not found!")
     return diccionario
+def avg_by_student(student_grades, keys=None):
+    if keys == None:
+        for student in student_grades:
+            subjects = student_grades[student]
+            total = 0
+            count = 0
+            for subject in subjects:
+                total = total + subjects[subject]
+                count = count + 1
+            average = total / count
+            print(student + ": " + str(round(average, 1)))
+    else:
+        solicitados = get_students(student_grades, keys)
+        for student in solicitados:
+            subjects = solicitados[student]
+            total = 0
+            count = 0
+            for subject in subjects:
+                total = total + subjects[subject]
+                count = count + 1
+            average = total / count
+            print(student + ": " + str(round(average, 1)))
