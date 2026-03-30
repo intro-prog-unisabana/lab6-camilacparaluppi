@@ -14,3 +14,14 @@ def add_student(student_grades={}):
     student_grades[name] = subjects
     print(f"Student {name} successfully added to the grades management system.")
     return student_grades
+def get_students(student_grades, keys):
+    diccionario = {}
+    for name in keys:
+        estudiante = False
+        for student in student_grades:
+            if student.lower() == name.lower():
+                diccionario[student.title()] = student_grades[student]
+                estudiante = True
+        if estudiante == False:
+            print(name.title() + " not found!")
+    return diccionario
